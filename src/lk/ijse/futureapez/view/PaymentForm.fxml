@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="908.0" prefWidth="1327.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.futureapez.controller.PaymentFormController">
+   <children>
+      <Label layoutX="41.0" layoutY="23.0" text="STUDENT PAYMENT">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="41.0" layoutY="52.0" prefHeight="3.0" prefWidth="396.0" style="-fx-background-color: #2f3640;" />
+      <Label layoutX="41.0" layoutY="124.0" text="Student ID  :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbstId" layoutX="137.0" layoutY="120.0" prefHeight="27.0" prefWidth="164.0" />
+      <Label layoutX="482.0" layoutY="124.0" text="Student Name  :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtStName" layoutX="610.0" layoutY="122.0" prefHeight="26.0" prefWidth="184.0" />
+      <Label layoutX="1014.0" layoutY="124.0" text="Batch :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="213.0" text="Course :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1006.0" layoutY="27.0" text="Payment ID :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPaymentId" layoutX="1107.0" layoutY="25.0" onKeyPressed="#pIdKeypressed" />
+      <Label layoutX="556.0" layoutY="202.0" prefHeight="22.0" prefWidth="40.0" text="Fee :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFee" layoutX="610.0" layoutY="198.0" />
+      <ImageView fitHeight="208.0" fitWidth="250.0" layoutX="7.0" layoutY="700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/edu4.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="914.0" layoutY="789.0" onAction="#OnActionPay" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: #55efc4;" text="Pay" />
+      <JFXButton buttonType="RAISED" layoutX="1051.0" layoutY="789.0" onAction="#onActionUpdate" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: #192a56;" text="UPDATE" textFill="#ebe4e4" />
+      <JFXButton buttonType="RAISED" layoutX="1181.0" layoutY="789.0" onAction="#onActionDelete" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: #d63031;" text="DELETE" textFill="#fff7f7" />
+      <Label fx:id="lblPayStatus" layoutX="1051.0" layoutY="255.0" prefHeight="30.0" prefWidth="247.0" textFill="#c61b1b">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="979.0" layoutY="199.0" prefHeight="22.0" prefWidth="98.0" text="Pay Amount :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPayAmount" layoutX="1085.0" layoutY="197.0" />
+      <TableView fx:id="tblPayment" layoutX="229.0" layoutY="344.0" onMouseClicked="#OnClickPayment" prefHeight="200.0" prefWidth="871.0">
+        <columns>
+          <TableColumn fx:id="colPayId" prefWidth="116.00003051757812" text="Payment ID" />
+          <TableColumn fx:id="colStId" prefWidth="116.0" text="Student ID" />
+            <TableColumn fx:id="colStName" prefWidth="197.0" text="Student Name" />
+            <TableColumn fx:id="colBatch" prefWidth="109.0" text="Batch" />
+            <TableColumn fx:id="colCourse" prefWidth="194.0" text="Course" />
+            <TableColumn fx:id="colPayAmount" prefWidth="138.0" text="Pay Amount" />
+        </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbBatch" layoutX="1070.0" layoutY="121.0" prefHeight="27.0" prefWidth="164.0" />
+      <JFXComboBox fx:id="cmbCourse" layoutX="124.0" layoutY="208.0" prefHeight="27.0" prefWidth="164.0" />
+      <JFXButton buttonType="RAISED" layoutX="323.0" layoutY="121.0" onAction="#OnActionSearch" prefHeight="30.0" prefWidth="114.0" style="-fx-background-color: #55efc4;" text="SEARCH" />
+   </children>
+</AnchorPane>

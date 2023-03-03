@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextLogin" prefHeight="1000.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.futureapez.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="999.0" fitWidth="1703.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/LoginForm.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="1122.0" layoutY="598.0" onMouseClicked="#onActionCreate" text="Create Account" textFill="#5f27cd">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUseName" layoutX="1008.0" layoutY="345.0" prefHeight="27.0" prefWidth="337.0" promptText="Username" unFocusColor="#5f27cd">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPass" layoutX="1008.0" layoutY="439.0" prefHeight="27.0" prefWidth="337.0" promptText="Password" unFocusColor="#5f27cd">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton layoutX="1072.0" layoutY="533.0" onAction="#onActionLogin" prefHeight="50.0" prefWidth="229.0" style="-fx-background-color: #5f27cd; -fx-border-radius: 20; -fx-background-radius: 20;" text="Login" textFill="#f5f2f2">
+         <font>
+            <Font size="23.0" />
+         </font></JFXButton>
+      <Label layoutX="1096.0" layoutY="274.0" onMouseClicked="#onActionCreate" text="Login your account" textFill="#5f27cd">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="1121.0" layoutY="786.0" text="Forget Password ?" textFill="#5f27cd">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Separator layoutX="1121.0" layoutY="807.0" prefHeight="2.0" prefWidth="132.0" style="-fx-background-color: #5f27cd;" />
+      <Label fx:id="lblLogincheck" layoutX="1068.0" layoutY="483.0" prefHeight="19.0" prefWidth="258.0" textFill="#e12828">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="logo" fitHeight="114.0" fitWidth="415.0" layoutX="38.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Group%201.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

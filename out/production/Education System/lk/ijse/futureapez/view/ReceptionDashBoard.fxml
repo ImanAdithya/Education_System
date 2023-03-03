@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.futureapez.controller.ReceptionDashBoardController">
+    <children>
+        <AnchorPane layoutY="-2.0" prefHeight="1062.0" prefWidth="376.0" style="-fx-background-color: #192a56;">
+            <children>
+                <Label layoutX="106.0" layoutY="131.0" text="FutureApez" textFill="#f5eded">
+                    <font>
+                        <Font size="31.0" />
+                    </font>
+                </Label>
+                <Label layoutX="136.0" layoutY="164.0" text="Technologies" textFill="#eee7e7" />
+                <Separator layoutY="198.0" prefHeight="0.0" prefWidth="374.0" />
+                <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="209.0" onAction="#OnActionDashboard" prefHeight="68.0" prefWidth="374.0" text="DASHBOARD" textFill="#ebe7e7">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </JFXButton>
+                <ImageView fitHeight="132.0" fitWidth="181.0" layoutX="86.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/logo.png" />
+                    </image>
+                </ImageView>
+                <JFXButton buttonType="RAISED" layoutX="7.0" layoutY="277.0" onAction="#OnActionStudent" prefHeight="68.0" prefWidth="360.0" text="STUDENT MANAGE" textFill="#ebe7e7">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="345.0" onAction="#OnActionCourse" prefHeight="68.0" prefWidth="360.0" text="COURSE MANAGE" textFill="#ebe7e7">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="413.0" onAction="#OnActionMarks" prefHeight="68.0" prefWidth="360.0" text="MARKS MANAGE" textFill="#ebe7e7">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="481.0" onAction="#OnActionPayment" prefHeight="68.0" prefWidth="360.0" text="MAKE PAYMENT" textFill="#ebe7e7">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton buttonType="RAISED" layoutX="114.0" layoutY="915.0" onAction="#OnActionLouOut" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: #d63031; -fx-background-radius: 20;" text="Log Out" textFill="#f2ecec">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </JFXButton>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="374.0" prefHeight="93.0" prefWidth="1327.0" style="-fx-background-color: #1e90ff;">
+         <children>
+            <Label layoutX="1080.0" layoutY="14.0" prefHeight="46.0" prefWidth="170.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+        <AnchorPane fx:id="receptionDashboardContext" layoutX="374.0" layoutY="92.0" prefHeight="908.0" prefWidth="1327.0">
+            <children>
+                <ImageView fitHeight="443.0" fitWidth="1304.0" layoutX="12.0" layoutY="11.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../assets/main.jpg" />
+                    </image>
+                    <effect>
+                        <DropShadow color="#1175d3" />
+                    </effect>
+                </ImageView>
+            </children></AnchorPane>
+    </children>
+</AnchorPane>

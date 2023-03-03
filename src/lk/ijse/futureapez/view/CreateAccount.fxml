@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextCreateAccount" prefHeight="435.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.futureapez.controller.CreateAccountController">
+   <children>
+      <Label layoutX="52.0" layoutY="14.0" text="CREATE USER ACCOUNT">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="52.0" layoutY="46.0" prefHeight="4.0" prefWidth="313.0" />
+      <Label layoutX="20.0" layoutY="103.0" text="User Name :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="118.0" layoutY="100.0" prefHeight="27.0" prefWidth="180.0" />
+      <Label layoutX="27.0" layoutY="150.0" text="Password :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtPassword" layoutX="118.0" layoutY="147.0" prefHeight="27.0" prefWidth="180.0" />
+      <Label layoutX="14.0" layoutY="194.0" text="Re Password :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtRetypepassword" layoutX="118.0" layoutY="192.0" prefHeight="27.0" prefWidth="180.0" />
+      <Label layoutX="66.0" layoutY="247.0" text="Email :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmail" layoutX="118.0" layoutY="245.0" onKeyPressed="#OnkeyPress" prefHeight="27.0" prefWidth="180.0" />
+      <JFXButton buttonType="RAISED" layoutX="123.0" layoutY="345.0" onAction="#onActionCreateAccount" prefHeight="36.0" prefWidth="170.0" style="-fx-background-color: #0984e3;" text="Create Account" textFill="#fff0f0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblcheck" layoutX="137.0" layoutY="219.0" prefHeight="17.0" prefWidth="153.0" textFill="#f22f2f" />
+   </children>
+</AnchorPane>

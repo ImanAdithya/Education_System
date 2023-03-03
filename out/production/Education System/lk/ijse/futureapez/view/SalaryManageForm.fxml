@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="908.0" prefWidth="1327.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.futureapez.controller.SalaryManageFormController">
+   <children>
+      <Label layoutX="28.0" layoutY="18.0" text="ADD SALARY">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="30.0" layoutY="45.0" prefHeight="0.0" prefWidth="369.0" style="-fx-background-color: #2d3436;" />
+      <Label layoutX="18.0" layoutY="97.0" text="Employee ID  :">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label layoutX="935.0" layoutY="93.0" text="Employee  Name  :">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <TextField layoutX="1126.0" layoutY="90.0" prefHeight="27.0" prefWidth="116.0" />
+      <JFXComboBox fx:id="cmbEmpid" layoutX="127.0" layoutY="94.0" prefHeight="27.0" prefWidth="138.0" />
+      <Label layoutX="35.0" layoutY="158.0" text="Amount : ">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblSalary" layoutX="288.0" layoutY="284.0" onMouseClicked="#mouseEventSalary" prefHeight="347.0" prefWidth="851.0">
+        <columns>
+          <TableColumn fx:id="colSalaryId" prefWidth="146.0" text="Salary ID" />
+          <TableColumn fx:id="colEmpId" prefWidth="142.0" text="Employee ID" />
+            <TableColumn fx:id="colEmpName" prefWidth="201.0" text="Employee Name" />
+            <TableColumn fx:id="colAmount" prefWidth="180.0" text="Amount" />
+            <TableColumn fx:id="colDate" prefWidth="180.0" text="Date" />
+        </columns>
+      </TableView>
+      <Label layoutX="995.0" layoutY="22.0" text="Salary ID :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmpName" layoutX="1079.0" layoutY="90.0" />
+      <TextField fx:id="txtSalary" layoutX="1073.0" layoutY="20.0" onKeyPressed="#OnkeyPress" />
+      <Label layoutX="1017.0" layoutY="147.0" text="Date :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="txtDate" layoutX="1079.0" layoutY="142.0" />
+      <ImageView fitHeight="244.0" fitWidth="255.0" layoutX="8.0" layoutY="696.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/edu5.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="891.0" layoutY="748.0" onAction="#onActionAddSalary" prefHeight="36.0" prefWidth="109.0" style="-fx-background-color: #55efc4;" text="ADD" textFill="#1b1919" />
+      <JFXButton buttonType="RAISED" layoutX="1031.0" layoutY="746.0" onAction="#OnActionUpdate" prefHeight="36.0" prefWidth="109.0" style="-fx-background-color: #192a56;" text="UPDATE" textFill="#fffdfd" />
+      <JFXButton buttonType="RAISED" layoutX="1160.0" layoutY="746.0" onAction="#OnActionDeleteSalary" prefHeight="36.0" prefWidth="109.0" style="-fx-background-color: #d63031;" text="DELETE" textFill="#eee7e7" />
+      <TextField fx:id="txtAmount" layoutX="103.0" layoutY="156.0" />
+      <JFXButton buttonType="RAISED" layoutX="288.0" layoutY="93.0" onAction="#OnActionSearch" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #079992;" text="SEARCH" textFill="#fffdfd" />
+   </children>
+</AnchorPane>

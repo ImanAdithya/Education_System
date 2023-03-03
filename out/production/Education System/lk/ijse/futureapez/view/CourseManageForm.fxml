@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="908.0" prefWidth="1327.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.futureapez.controller.CourseManageFormController">
+   <children>
+      <Label layoutX="27.0" layoutY="29.0" text="ADD COURSE AND TEACHERS">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="21.0" layoutY="59.0" prefHeight="0.0" prefWidth="507.0" style="-fx-background-color: #2d3436;" />
+      <Label layoutX="27.0" layoutY="114.0" prefHeight="22.0" prefWidth="115.0" text="Course Name :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCourseFee" layoutX="625.0" layoutY="112.0" prefHeight="27.0" prefWidth="197.0" />
+      <Label layoutX="1072.0" layoutY="21.0" prefHeight="22.0" prefWidth="78.0" text="Course ID :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCourseId" layoutX="1155.0" layoutY="19.0" onKeyPressed="#Onkeypress" prefHeight="27.0" prefWidth="122.0" />
+      <Label layoutX="506.0" layoutY="114.0" prefHeight="22.0" prefWidth="115.0" text="Course Fee :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="175.0" prefHeight="22.0" prefWidth="70.0" text="Teacher :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="939.0" layoutY="217.0" onAction="#OnActionAdd" prefHeight="38.0" prefWidth="108.0" style="-fx-background-color: #55efc4;" text="ADD" />
+      <JFXButton buttonType="RAISED" layoutX="1197.0" layoutY="217.0" onAction="#onActionDelete" prefHeight="38.0" prefWidth="108.0" style="-fx-background-color: #d63031;" text="DELETE" textFill="#ebe1e1" />
+      <JFXButton buttonType="RAISED" layoutX="1067.0" layoutY="217.0" onAction="#onActionUpdate" prefHeight="38.0" prefWidth="108.0" style="-fx-background-color: #192a56;" text="UPDATE" textFill="#f8eeee" />
+      <TextField fx:id="txtCourseName" layoutX="142.0" layoutY="112.0" prefHeight="27.0" prefWidth="213.0" />
+      <Label layoutX="916.0" layoutY="114.0" prefHeight="22.0" prefWidth="143.0" text="Duration(Months) :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDuration" layoutX="1059.0" layoutY="112.0" prefHeight="27.0" prefWidth="197.0" />
+      <JFXComboBox fx:id="cmbTeachers" layoutX="142.0" layoutY="173.0" prefHeight="27.0" prefWidth="179.0" />
+      <TableView fx:id="tblCourses" layoutX="99.0" layoutY="255.0" onMouseClicked="#tblCourseClick" prefHeight="200.0" prefWidth="729.0">
+        <columns>
+          <TableColumn fx:id="colCid" prefWidth="128.0" text="Course ID" />
+          <TableColumn fx:id="colCName" prefWidth="156.0" text="Course Name" />
+            <TableColumn fx:id="colCfee" prefWidth="158.0" text="Fee" />
+            <TableColumn fx:id="colCDuration" prefWidth="127.0" text="Duration" />
+            <TableColumn fx:id="colTeacher" prefWidth="159.0" text="Teacher" />
+        </columns>
+      </TableView>
+      <Label layoutX="27.0" layoutY="478.0" text="ADD SUBJECT FOR COURSE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="21.0" layoutY="508.0" prefHeight="3.0" prefWidth="507.0" style="-fx-background-color: #2d3436;" />
+      <Label layoutX="27.0" layoutY="535.0" prefHeight="22.0" prefWidth="78.0" text="Course Id :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCourseId" layoutX="105.0" layoutY="533.0" prefHeight="27.0" prefWidth="134.0" />
+      <Label layoutX="282.0" layoutY="536.0" prefHeight="22.0" prefWidth="115.0" text="Course Name :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSCourseName" layoutX="397.0" layoutY="534.0" prefHeight="27.0" prefWidth="197.0" />
+      <TextField fx:id="txtSubjectId" layoutX="123.0" layoutY="608.0" prefHeight="27.0" prefWidth="122.0" />
+      <Label layoutX="31.0" layoutY="610.0" prefHeight="22.0" prefWidth="90.0" text="Subject ID :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="282.0" layoutY="610.0" prefHeight="22.0" prefWidth="115.0" text="Subject Name :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSubjectName" layoutX="397.0" layoutY="608.0" prefHeight="27.0" prefWidth="197.0" />
+      <JFXButton buttonType="RAISED" layoutX="88.0" layoutY="676.0" onAction="#onActionSubjectAdd" prefHeight="38.0" prefWidth="108.0" style="-fx-background-color: #55efc4;" text="ADD" />
+      <JFXButton buttonType="RAISED" layoutX="228.0" layoutY="676.0" onAction="#OnActionSearchSub" prefHeight="38.0" prefWidth="108.0" style="-fx-background-color: #192a56;" text="SEARCH" textFill="#f8eeee" />
+      <JFXButton buttonType="RAISED" layoutX="362.0" layoutY="676.0" onAction="#onActionSubjectDelete" prefHeight="38.0" prefWidth="108.0" style="-fx-background-color: #d63031;" text="DELETE" textFill="#ebe1e1" />
+      <TableView fx:id="tblSuject" layoutX="638.0" layoutY="521.0" prefHeight="200.0" prefWidth="468.0">
+        <columns>
+          <TableColumn fx:id="colCourseIdS" prefWidth="130.0" text="CourseID" />
+          <TableColumn fx:id="colSubjectId" prefWidth="148.0" text="Suject ID" />
+            <TableColumn fx:id="colSubjectName" prefWidth="189.0" text="Suject Name" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="908.0" prefWidth="1327.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.futureapez.controller.EmployeManageFormController">
+   <children>
+      <Label layoutX="25.0" layoutY="23.0" text="ADD EMPLOYEE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="25.0" layoutY="53.0" prefHeight="0.0" prefWidth="447.0" style="-fx-background-color: #2f3640;" />
+      <Label layoutX="1020.0" layoutY="31.0" text="Employee ID :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmpId" layoutX="1130.0" layoutY="28.0" onKeyPressed="#KeypressId" />
+      <Label layoutX="25.0" layoutY="103.0" text="Employee Name :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEname" layoutX="168.0" layoutY="101.0" prefHeight="27.0" prefWidth="188.0" />
+      <Label layoutX="523.0" layoutY="104.0" text="Address :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEAddress" layoutX="602.0" layoutY="102.0" prefHeight="27.0" prefWidth="188.0" />
+      <Label layoutX="962.0" layoutY="104.0" text="NIC :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEnic" layoutX="1020.0" layoutY="101.0" onKeyPressed="#OnKeyPressNic" prefHeight="27.0" prefWidth="247.0" />
+      <Label layoutX="31.0" layoutY="167.0" text="Job Role :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbJobRole" layoutX="115.0" layoutY="165.0" prefHeight="27.0" prefWidth="152.0" />
+      <Label layoutX="523.0" layoutY="167.0" text="Contact :">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtContatct" layoutX="602.0" layoutY="165.0" prefHeight="27.0" prefWidth="188.0" />
+      <TableView fx:id="tblTeacher" layoutX="279.0" layoutY="281.0" onMouseClicked="#tblEmployee" prefHeight="253.0" prefWidth="835.0">
+        <columns>
+          <TableColumn fx:id="colTid" prefWidth="108.0" text="Employee ID" />
+          <TableColumn fx:id="colTname" prefWidth="162.0" text="Employee Name" />
+            <TableColumn fx:id="colTnic" prefWidth="171.0" text="NIC" />
+            <TableColumn fx:id="colTrole" prefWidth="144.0" text="Job Role" />
+            <TableColumn fx:id="colTcontact" prefWidth="129.0" text="Contact" />
+            <TableColumn fx:id="colTAddress" prefWidth="120.0" text="Address" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="908.0" layoutY="213.0" onAction="#onActionEmployeeAdd" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #55efc4;" text="ADD EMPLOYEE" />
+      <JFXButton buttonType="RAISED" layoutX="1050.0" layoutY="213.0" onAction="#OnActionUpdate" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: #192a56#192a56;" text="UPDATE" textFill="#eee4e4" />
+      <JFXButton buttonType="RAISED" layoutX="1174.0" layoutY="213.0" onAction="#onActionDelete" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: #d63031;" text="DELETE" textFill="#f2e9e9" />
+   </children>
+</AnchorPane>

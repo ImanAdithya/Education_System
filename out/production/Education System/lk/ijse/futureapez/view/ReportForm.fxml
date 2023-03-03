@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="908.0" prefWidth="1327.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.futureapez.controller.ReportFormController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="76.0" layoutY="29.0" onAction="#onActionStuentReport" prefHeight="59.0" prefWidth="166.0" style="-fx-background-color: #0984e3; -fx-border-radius: 20; -fx-background-radius: 20;" text="STUDENT REPORT" textFill="#eee8e8">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow color="#2c0303" />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="payment" buttonType="RAISED" layoutX="280.0" layoutY="30.0" onAction="#onActionPaymentReport" prefHeight="59.0" prefWidth="166.0" style="-fx-background-color: #0984e3; -fx-border-radius: 20; -fx-background-radius: 20;" text="PAYMENT REPORT" textFill="#eee8e8">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow color="#170e0e" />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="salary" buttonType="RAISED" layoutX="477.0" layoutY="29.0" onAction="#onActionSalaryReport" prefHeight="59.0" prefWidth="166.0" style="-fx-background-color: #0984e3; -fx-border-radius: 20; -fx-background-radius: 20;" text="SALARY REPORT" textFill="#eee8e8">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow color="#1b0606" />
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>

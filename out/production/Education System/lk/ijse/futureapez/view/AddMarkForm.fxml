@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="908.0" prefWidth="1327.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.futureapez.controller.AddMarkFormController">
+   <children>
+      <Label layoutX="22.0" layoutY="24.0" text="ADD  EXAMS ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="53.0" prefHeight="0.0" prefWidth="503.0" style="-fx-background-color: #2f3640;" />
+      <ImageView fitHeight="131.0" fitWidth="176.0" layoutX="1149.0" layoutY="777.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/edu2.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="913.0" layoutY="154.0" onAction="#onActionAdd" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #55efc4;" text="ADD" />
+      <JFXButton layoutX="1176.0" layoutY="154.0" onAction="#onActionDelete" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #d63031;" text="DELETE" textFill="#ebe2e2" />
+      <Label layoutX="22.0" layoutY="99.0" text="Course ID :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCourse" layoutX="107.0" layoutY="96.0" prefHeight="27.0" prefWidth="110.0" />
+      <Label layoutX="1075.0" layoutY="24.0" text="Exam ID :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtExamId" layoutX="1157.0" layoutY="22.0" onKeyPressed="#examIdKeypressed" prefHeight="27.0" prefWidth="149.0" />
+      <Label layoutX="422.0" layoutY="98.0" text="Course Name :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCourseName" layoutX="547.0" layoutY="96.0" prefHeight="27.0" prefWidth="195.0" />
+      <Label layoutX="795.0" layoutY="98.0" text="Exam Name :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtExam" layoutX="901.0" layoutY="96.0" prefHeight="27.0" prefWidth="188.0" />
+      <JFXButton layoutX="1047.0" layoutY="154.0" onAction="#onActionSearch" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #192a56;" text="SEARCH" textFill="#f5eaea" />
+      <TableView fx:id="tblExam" layoutX="47.0" layoutY="169.0" onMouseClicked="#MouseEventTable" prefHeight="200.0" prefWidth="463.0">
+        <columns>
+          <TableColumn fx:id="colExamId" prefWidth="116.0" text="Exam ID" />
+          <TableColumn fx:id="colCourseId" prefWidth="144.0" text="Course ID" />
+            <TableColumn fx:id="colExam" prefWidth="202.0" text="Exam" />
+        </columns>
+      </TableView>
+      <Label layoutX="46.0" layoutY="402.0" text="ADD  MARKS ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="38.0" layoutY="431.0" prefHeight="0.0" prefWidth="503.0" style="-fx-background-color: #2f3640;" />
+      <Label layoutX="32.0" layoutY="467.0" text="Student ID :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbStId" layoutX="128.0" layoutY="465.0" prefHeight="27.0" prefWidth="129.0" />
+      <Label layoutX="341.0" layoutY="467.0" text="Student Name :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtStName" layoutX="469.0" layoutY="465.0" prefHeight="27.0" prefWidth="195.0" />
+      <JFXComboBox fx:id="cmbBatch" layoutX="830.0" layoutY="465.0" prefHeight="27.0" prefWidth="110.0" />
+      <Label layoutX="766.0" layoutY="467.0" text="Batch :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbMarkCourse" layoutX="1121.0" layoutY="465.0" prefHeight="27.0" prefWidth="110.0" />
+      <Label layoutX="1036.0" layoutY="467.0" text="Course :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="527.0" text="Exam :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbExam" layoutX="128.0" layoutY="525.0" prefHeight="27.0" prefWidth="129.0" />
+      <JFXButton layoutX="927.0" layoutY="523.0" onAction="#onActionAddMark" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #55efc4;" text="ADD" />
+      <JFXButton layoutX="1190.0" layoutY="523.0" onAction="#OnActionMarkDelete" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #d63031;" text="DELETE" textFill="#ebe2e2" />
+      <JFXButton layoutX="1061.0" layoutY="523.0" onAction="#onActionSearchMark" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #192a56;" text="SEARCH" textFill="#f5eaea" />
+      <TextField fx:id="txtMarks" layoutX="835.0" layoutY="525.0" prefHeight="27.0" prefWidth="70.0" />
+      <Label layoutX="768.0" layoutY="527.0" text="Marks :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMarkid" layoutX="1154.0" layoutY="404.0" onKeyPressed="#MarkIdKeyPressd" prefHeight="27.0" prefWidth="149.0" />
+      <Label layoutX="1078.0" layoutY="406.0" text="Mark ID :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtExamName" layoutX="469.0" layoutY="525.0" prefHeight="27.0" prefWidth="195.0" />
+      <Label layoutX="362.0" layoutY="527.0" text="Exam name :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblMark" layoutX="96.0" layoutY="590.0" onMouseClicked="#MarkOnAction" prefHeight="200.0" prefWidth="977.0">
+        <columns>
+          <TableColumn fx:id="colStid" prefWidth="115.0" text="Mark ID" />
+          <TableColumn fx:id="colCourseName" prefWidth="178.0" text="Course" />
+            <TableColumn fx:id="colMarkExamID" prefWidth="167.0" text="Exam ID" />
+            <TableColumn fx:id="colMarkExamName" prefWidth="225.0" text="Exam" />
+            <TableColumn fx:id="colMark" prefWidth="173.0" text="Mark" />
+            <TableColumn fx:id="colBatch" prefWidth="116.0" text="batch" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
